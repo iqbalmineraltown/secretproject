@@ -13,8 +13,8 @@ var uiTimer = $("#timer");
 
 //create deck array
 var matchingGame = {};
-matchingGame.deck = ['blueDino', 'blueDino','brownDino', 'brownDino','redDino', 'redDino','greenDino', 'greenDino','purpDino', 'purpDino','burgDino', 'burgDino',
-'orangeDino', 'orangeDino','purp2Dino', 'purp2Dino','pinkDino', 'pinkDino',];
+matchingGame.deck = ['juan', 'juan','aji', 'aji','mufid', 'mufid','adrian', 'adrian','afifa', 'afifa','inas', 'inas',
+'goz', 'goz','felik', 'felik','anang', 'anang',];
 
 //on document load the lazy way
 $(function(){
