@@ -133,8 +133,8 @@ function reStartGame(){
 				playGame = false;
 				uiCards.html("<div class='card'><div class='face front'></div><div class='face back'></div></div>");
 				clearTimeout(scoreTimeout);
-				matchingGame.deck = ['blueDino', 'blueDino','brownDino', 'brownDino','redDino', 'redDino','greenDino', 'greenDino','purpDino', 'purpDino','burgDino', 'burgDino',
-'orangeDino', 'orangeDino','purp2Dino', 'purp2Dino','pinkDino', 'pinkDino',];			
+				matchingGame.deck = ['juan', 'juan','aji', 'aji','mufid', 'mufid','adrian', 'adrian','afifa', 'afifa','inas', 'inas',
+'goz', 'goz','felik', 'felik','anang', 'anang',];			
 				startGame();
 			}
 				
