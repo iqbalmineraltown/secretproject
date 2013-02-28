@@ -167,17 +167,14 @@ body {
 	opacity: 0;
 }
 
-/**
-ini buat masukin gambarnya dari spritesheet
-**/
 .blueDino {background-position: 0 0;}
 .brownDino {background-position: -113px 0;}
 .redDino {background-position: -226px 0;}
 .greenDino {background-position: -339px 0;}
-.purpDino {background-position: -452px 0;}
-.burgDino {background-position: -565px 0;}
-.orangeDino {background-position: -678px 0;}
-.purp2Dino {background-position: -792px 0;}
+.purpDino {background-position: -451px 0;}
+.burgDino {background-position: -550px 0;}
+.orangeDino {background-position: -663px 0;}
+.purp2Dino {background-position: -776px 0;}
 .pinkDino {background-position: -905px 0;}
 
 

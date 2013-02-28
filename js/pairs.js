@@ -13,8 +13,8 @@ var uiTimer = $("#timer");
 
 //create deck array
 var matchingGame = {};
-matchingGame.deck = ['juan', 'aji','mufid', 'adrian','afifa', 'inas','gozali', 'felik','anang', 'andros','rachmad', 'farah',
-'nono', 'rangkuti','iqbal', 'endah','swastu', 'andika',];
+matchingGame.deck = ['blueDino', 'blueDino','brownDino', 'brownDino','redDino', 'redDino','greenDino', 'greenDino','purpDino', 'purpDino','burgDino', 'burgDino',
+'orangeDino', 'orangeDino','purp2Dino', 'purp2Dino','pinkDino', 'pinkDino',];
 
 //on document load the lazy way
 $(function(){
@@ -114,8 +114,6 @@ function isMatchPattern() {
 	var cards = $(".card-flipped");
 	var pattern = $(cards[0]).data("pattern");
 	var anotherPattern = $(cards[1]).data("pattern");
-	window.log("log: test");
-	window.alert("asdf");
 	return (pattern == anotherPattern);
 }
 
