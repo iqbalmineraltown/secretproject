@@ -11,17 +11,13 @@ var uiScore = $(".gameScore");
 var uiPlay = $("#gamePlay");
 var uiTimer = $("#timer");
 
-//create deck array
 var matchingGame = {};
-matchingGame.deck = ['juan', 'juan','aji', 'aji','mufid', 'mufid','adrian', 'adrian','afifa', 'afifa','inas', 'inas',
-'goz', 'goz','felik', 'felik','anang', 'anang',];
+matchingGame.deck = ['ja','ja1','ma','ma1','ai','ai1','gf','gf1','aa', 'aa1','rf','rf1','nr','nr1','ie','ie1','sa','sa1',];
 
-//on document load the lazy way
 $(function(){
 	  init();
 });
 
-//initialise game
 function init() {
 					uiComplete.hide();
 					uiCards.hide();
@@ -39,10 +35,10 @@ function init() {
 					});
 			}
 
-//start game and create cards from deck array
+
 function startGame(){
 				uiTimer.show();
-				uiScore.html("0 seconds");
+				uiScore.html("0 detik");
 				uiStats.show();
 				uiCards.show();
 				score = 0;
@@ -54,18 +50,18 @@ function startGame(){
 								$(".card:first-child").clone().appendTo("#cards");
 							}
 							uiCards.children().each(function(index) {
-								// align the cards to be 3x6 ourselves.
+								
 								$(this).css({
 									"left" : ($(this).width() + 20) * (index % 6),
 									"top" : ($(this).height() + 20) * Math.floor(index / 6)
 								});
-								// get a pattern from the shuffled deck
+								
 								var pattern = matchingGame.deck.pop();
-								// visually apply the pattern on the card's back side.
+								
 								$(this).find(".back").addClass(pattern);
-								// embed the pattern data into the DOM element.
+								
 								$(this).attr("data-pattern",pattern);
-								// listen the click event on each card DIV element.
+								
 								$(this).click(selectCard);
 							});											 
 				   	timer();
@@ -77,7 +73,7 @@ function timer() {
 				
 				if (playGame) {
 					scoreTimeout = setTimeout(function() {
-						uiScore.html(++score + " seconds");		
+						uiScore.html(++score + " detik");		
 						timer();
 					}, 1000);
 				};
@@ -114,7 +110,7 @@ function isMatchPattern() {
 	var cards = $(".card-flipped");
 	var pattern = $(cards[0]).data("pattern");
 	var anotherPattern = $(cards[1]).data("pattern");
-	return (pattern == anotherPattern);
+	return (pattern.substr(0,2) == anotherPattern.substr(0,2));
 }
 
 function removeTookCards() {
@@ -133,8 +129,7 @@ function reStartGame(){
 				playGame = false;
 				uiCards.html("<div class='card'><div class='face front'></div><div class='face back'></div></div>");
 				clearTimeout(scoreTimeout);
-				matchingGame.deck = ['juan', 'juan','aji', 'aji','mufid', 'mufid','adrian', 'adrian','afifa', 'afifa','inas', 'inas',
-'goz', 'goz','felik', 'felik','anang', 'anang',];			
+				matchingGame.deck = ['ja','ja1','ma','ma1','ai','ai1','gf','gf1','aa', 'aa1','rf','rf1','nr','nr1','ie','ie1','sa','sa1',];			
 				startGame();
 			}
 				
